@@ -17,7 +17,7 @@ import java.util.List;
 public class InventoryController {
     private final InventoryService inventoryService;
 
-    // http://localhost:8082/api/inventory?sku-code=iphone-13&sku-code=iphone-13-red
+    // http://localhost:8082/api/inventory?skuCode=iphone-13&sku-code=iphone-13-red
     @ResponseStatus(HttpStatus.OK)
     public List<InventoryResponse> isInStock(@RequestParam List<String> skuCode){
         return inventoryService.isInStock(skuCode);
