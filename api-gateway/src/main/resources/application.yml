@@ -13,10 +13,13 @@ spring:
         - id: discovery-server
           uri: http://localhost:8761
           predicates:
-            - Path=/eureka/**
             - Path=/eureka/web
           filters:
             - SetPath=/
+        - id: discovery-server
+          uri: http://localhost:8761
+          predicates:
+            - Path=/eureka/**
 eureka:
       client:
         serviceUrl:
